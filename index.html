@@ -4,80 +4,101 @@
 <head>
 
     <style>
-        body {
-            text-align: center;
-        }
-
         div {
-            margin: 5px;
+            margin: 10px;
         }
 
         .resetBtn {
             background-color: red;
         }
-
-        .center {
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        tr td+td {
-            text-align: left;
-        }
-
-        #promo {
-            color: brown;
-            font-weight: bold;
-        }
     </style>
 </head>
 
+<!-- 3 Different types of input fields -->
+<!-- Inline -->
+<!-- Internal -->
+<!-- External -->
+
 <body>
-    <h1>lunch special</h1>
-    <h3>monday thru friday, 11 am ~ 3 pm</h3>
-    <h2>$9.95 <span style="font-weight: normal; font-size: medium;">(plus tax)</span></h2>
+    <h1>Sign up now to MANDARLIEV</h1>
 
-    </br>
-    <h2>sandwich</h2>
+    <form onsubmit="" method="post" target="_blank" autocomplete="on">
+        <!-- Different types of input fields -->
+        <div>
+            <label for="fname">First name</label>
+            <input type="text" id="fname" placeholder="Elon">
+        </div>
 
-    <table class="center">
-        <tr>
-            <td><strong>Mon:</strong></td>
-            <td>Tomato Mozarella or Chicken Salad</td>
-        </tr>
-        <tr>
-            <td><strong>Tues:</strong></td>
-            <td>Greek Salad Wrap or Toto Wrap</td>
-        </tr>
-        <tr>
-            <td><strong>Wed:</strong></td>
-            <td>Red Pepper Hummus or Roasted Turkey</td>
-        </tr>
-        <tr>
-            <td><strong>Thur:</strong></td>
-            <td>Carrot-Ginger Hummus Wrap or Egg Salad</td>
-        </tr>
-        <tr>
-            <td><strong>Fri:</strong></td>
-            <td>Dado Wrap or Tuna Salad</td>
-        </tr>
-    </table>
+        <div>
+            <label for="lname">Last name</label>
+            <input type="text" id="lname" placeholder="Musk">
+        </div>
 
-    <p id="promo">75¢ extra for Gluten Free Bread</p>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="abc@gmail.com">
+        </div>
 
+        <div>
+            <label for="phone">Telephone</label>
+            <input type="tel" id="phone">
+        </div>
 
-    <h2>snack</h2>
-    <p>Apple, Banana, or Potato Chips</p>
-    </br>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="password">
+        </div>
 
-    <h2>regular size drink</h2>
-    <p>Coffee or Iced Coffee</p>
-    <p>Organic Peppermint</p>
-    <p>Hot or Iced Sencha Green Tea</p>
-    <p>Hot or Iced Keemun Black Tea</p>
-    <p id="promo">$1.50 extra for any regular size Bubble Tea <br>75¢ extra for Large Drink</p>
-    <p style="font-weight: bold;">~ NO SUBSTITUTIONS ~</p>
+        <!-- SELECT (dropdown choice) input fields -->
+        <div>
+            <label for="level">What is your current skill level in coding:</label>
+            <select name="level" id="level">
+                <option value="0">I'm a Beginner</option>
+                <option value="1">I'm an Intermediate</option>
+                <option value="2">I'm an Expert</option>
+                <option value="3">I'm TBE</option>
+            </select>
+        </div>
 
+        <!-- RADIO (select one) input fields -->
+        <div>
+            <label for="course">Which Membership would you like:</label>
+            <div>
+                <input type="radio" name="course" value="platinum" id="platinum" />
+                <label for="platinum">I want MANDARLIEV Platinum</label><br />
+                <input type="radio" name="course" id="diamond" value="diamond" checked />
+                <label for="diamond">I want MANDARLIEV DIAMOND</label><br />
+            </div>
+        </div>
+
+        <!-- CHECKBOX (select many) input field -->
+        <div>
+            <label for="reason">Why do you want to join MANDARLIEV?</label>
+            <div>
+                <input type="checkbox" name="reason" id="love" value="love" checked />
+                <label for="love">I LOVE React!</label><br />
+
+                <input type="checkbox" name="reason" id="community" value="community" />
+                <label for="community">I want to be part of an awesome community!</label><br />
+
+                <input type="checkbox" name="reason" id="job" value="job" />
+                <label for="job">I want to land a job this year!</label><br />
+
+                <input type="checkbox" name="reason" id="learn" value="skills" />
+                <label for="learn">I want to push my current Coding Skills!</label><br />
+            </div>
+        </div>
+
+        <!-- File picker input field -->
+        <input type="File">
+
+        <!-- Form control buttons -->
+        <div>
+            <button class="resetBtn" type="reset">RESET</button>
+            <button type="submit">Submit</button>
+        </div>
+
+    </form>
 </body>
 
 </html>
